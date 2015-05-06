@@ -16,14 +16,16 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 
 ## Configuration
 
-CSV's must be properly prepared.  Any comma within a field must be replaced with
+CSV's must be properly prepared.  Any comma within a field (i.e. the LABEL field) must be replaced with
 a double pipe ie - 'Nursing, Department of' must be replaced with
 'Nursing|| Department of'
 
-If multiple arguments are supplied within a single column, they must be
-separated with a ~  ie meat~cheese~pickles
-If a column in a CSV is to be processed it must have a header from the following
-list.
+Do not use commas in the PID or PARENT fields.
+
+If multiple arguments are supplied for the PARENT field, they must be
+separated with a ~  ie islandora:root~islandora:basic_image_collection.
+
+The CSV must contain the following columns:
 
 * LABEL
 * PID
