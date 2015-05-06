@@ -1,0 +1,6 @@
+name = Islandora Collection CSV Import
+description = Create Collection from supplied CSV.
+dependencies[] = islandora
+dependencies[] = islandora_basic_collection
+package = Islandora
+core = 7.x
