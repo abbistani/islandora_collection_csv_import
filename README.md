@@ -32,7 +32,7 @@ The CSV must contain the following columns:
 * PARENT
 
 Where LABEL is the label of the collection object to import, PID is a valid PID for this collection object, 
-and PARENT is a list of pids (separated by ~) for this collection to be made a memberOfCollection of.
+and PARENT is a list of pids (separated by ~) to which this collection will have an isMemberOfCollection relationship.
 
 ## Troubleshooting/Issues
 
