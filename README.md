@@ -1,5 +1,9 @@
 # Islandora Collection CSV Import 
 
+## Bug Warning
+
+This module doens't add collection policies yet. If you use this, you won't be able to add to the collections using the GUI (though you can add to them programmatically) - May 20 2015
+
 ## Introduction
 
 This module is for adding collection objects to Islandora using a .csv file. 
