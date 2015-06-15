@@ -78,5 +78,12 @@ function islandora_collection_csv_import_build_collection_object($collection) {
   foreach ($parents as $parent) {
     $fedora_object->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', $parent);
   }
+  if (isset($collection['COLLECTION_POLICY'])) {
+    $collection_policy_ds = $fedora_object->constructDatastream('COLLECTION_POLICY', 'X');
+    $collection_policy_ds->label = 'Collection policy';
+    $collection_policy_ds->mimetype = 'text/xml';
+    $collection_policy_ds->setContentFromFile($collection['COLLECTION_POLICY']);
+    $fedora_object->ingestDatastream($collection_policy_ds); 
+  }  
   $new_fedora_object = islandora_add_object($fedora_object);
 }

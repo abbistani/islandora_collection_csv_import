@@ -1,9 +1,5 @@
 # Islandora Collection CSV Import 
 
-## Bug Warning
-
-This module doens't add collection policies yet. If you use this, you won't be able to add to the collections using the GUI (though you can add to them programmatically) - May 20 2015
-
 ## Introduction
 
 This module is for adding collection objects to Islandora using a .csv file. 
@@ -38,6 +34,10 @@ The CSV must contain the following columns:
 Where LABEL is the label of the collection object to import, PID is a valid PID for this collection object (or a namespace,
 in which case the PID will be assigned automatically), and PARENT is a list of pids (separated by ~) to which this collection
 will have an isMemberOfCollection relationship.
+
+The CSV can also contain a COLLECTION_POLICY COLUMN with the complete path to a valid COLLECTION_POLICY XML file for the
+collection object.  If you choose not to add a COLLECTION_POLICY, you won't be able to add to the collections using the GUI
+(though you can add to them programmatically).
 
 ## Troubleshooting/Issues
 
