@@ -35,9 +35,10 @@ Where LABEL is the label of the collection object to import, PID is a valid PID 
 in which case the PID will be assigned automatically), and PARENT is a list of pids (separated by ~) to which this collection
 will have an isMemberOfCollection relationship.
 
-The CSV can also contain a COLLECTION_POLICY COLUMN with the complete path to a valid COLLECTION_POLICY XML file for the
-collection object.  If you choose not to add a COLLECTION_POLICY, you won't be able to add to the collections using the GUI
-(though you can add to them programmatically).
+The CSV can also contain a COLLECTION_POLICY column with the complete path to a valid COLLECTION_POLICY XML file for the
+collection object.  This file should be on your server, in a location and with permissions that enable it to be read by the web server
+user id.   If you choose not to add a COLLECTION_POLICY, you won't be able to add to the collections using the GUI (though you 
+can add to them programmatically).
 
 ## Troubleshooting/Issues
 
